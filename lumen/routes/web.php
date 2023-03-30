@@ -24,8 +24,8 @@ $router->group(['as'=>'api.', 'prefix'=>'api'], function ()  use ($router) {
 
     $router->get('buildings', ['uses' => 'BuildingController@index']);
     $router->get('buildings/{id}', ['uses' => 'BuildingController@show']);
-    $router->post('buildings', ['uses' => 'BuildingController@store', 'middleware'=> 'role:System Admin']);
-    $router->put('buildings/{id}', ['uses' => 'BuildingController@update', 'middleware'=> 'role:Manager']);
+    $router->post('buildings', ['uses' => 'BuildingController@store']);
+    $router->put('buildings/{id}', ['uses' => 'BuildingController@update',);
     $router->delete('buildings/{id}', ['uses' => 'BuildingController@destroy']);
 
 
